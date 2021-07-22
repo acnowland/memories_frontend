@@ -3,9 +3,18 @@ import picture from "./images/picture.png";
 import Posts from "./components/Posts/posts";
 import Form from "./components/Form/form";
 import useStyles from "./styles";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getPosts } from "./actions/posts";
 
 function App() {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+
   return (
     <Container>
       <AppBar className={classes.appBar} position="static" color="inherit">

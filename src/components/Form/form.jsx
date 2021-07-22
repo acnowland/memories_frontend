@@ -1,7 +1,10 @@
 import React from "react";
+import useStyles from "./styles";
 
-const form = () => {
+const Form = () => {
+  const classes = useStyles();
+
   return <div>Form Area</div>;
 };
 
-export default form;
+export default Form;

@@ -1,6 +1,8 @@
 import React from "react";
+import useStyles from "./style";
 
-const post = () => {
+const Post = () => {
+  const classes = useStyles();
   return (
     <div>
       <h1>Single Post</h1>
@@ -8,4 +10,4 @@ const post = () => {
   );
 };
 
-export default post;
+export default Post;
